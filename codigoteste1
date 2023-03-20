@@ -1,0 +1,34 @@
+# iniciojscript
+// Comparar Idade 
+class Players{
+    
+    nome;
+    idade;
+    cargo;
+
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cargo = 'Desenvolvedor Front-End Júnior';
+        this.anoDeNascimento = 2023 - idade;
+    }
+
+    anunciar() {
+        console.log(`Meu nome é  ${this.nome} e tenho ${this.idade} anos. Atualmente sou ${this.cargo}`);    
+    }
+}
+
+function compararIdade(p1, p2) {
+    if (p1.idade > p2.idade) {
+        console.log(`${p1.nome} é mais velho(a) que ${p2.nome}`);
+    } else if(p2.idade > p1.idade){
+        console.log(`${p2.nome} é mais velho(a) que ${p1.nome}`);
+    } else {
+        console.log(`${p1.nome} e ${p2.nome} tem a mesma idade`);
+    }
+}
+
+const playerid = new Players('Borees', 23);
+const player = new Players('João Vitor', 20)
+
+compararIdade(playerid, player);
